@@ -1,0 +1,17 @@
+DbDriver = oracle.jdbc.driver.OracleDriver
+
+DbURL = jdbc:oracle:thin:@//172.30.1.8:1521/DMS02
+
+DbUserName = PRMADM
+
+DbPassword = PRMADM
+
+migrationFile = migrationData/EOS_EMP_VIEW_20170720.xlsx
+
+columnDataType = Number,String,String,String,String,Number,String,Date,Date,String,Number,String,String,String,Date
+
+dateFormatter = dd.MM.yyyy HH:mm:ss
+
+dateReplaceMonth = false
+
+insertQuery = Insert into PRMADM.EOS_EMPLOYEE_MINUS3 (INTL_USER_ID,OFFICIAL_ID_NO,USER_NAME,FIRST_NAME,LAST_NAME,POSITION_ID,POSITION_TYPE_CODE,POSITION_START_DATE,POSITION_END_DATE,DEALER_CODE,DEALER_STATUS,GSM,VENDOR_ID,TAX_NO,CREATION_DATE) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
